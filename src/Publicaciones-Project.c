@@ -31,7 +31,7 @@ int main(void) {
 
 void abrirArchivos(){
 	in = fopen("/home/lucas/Documentos/ML-Project/template.html","r");
-	out = fopen("/home/lucas/workspace/ML-Publicaciones/resu.txt","w");
+	out = fopen("/home/lucas/resu.txt","w");
 }
 
 void cerrarArchivos(){
