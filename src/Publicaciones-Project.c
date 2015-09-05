@@ -21,17 +21,25 @@ FILE* out;
 void obtenerPublicaciones();
 void abrirArchivos();
 void cerrarArchivos();
+char* archin;
+char* archout;
 
-int main(void) {
+int main(int argc, char *argv[]) {
+	archin = string_new();
+	archout = string_new();
+	string_append(&archin,argv[1]);
+	string_append(&archout,argv[2]);
 	abrirArchivos();
+	printf("%s\n",archin);
+	printf("%s\n",archout);
 	obtenerPublicaciones();
 	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
 	return EXIT_SUCCESS;
 }
 
 void abrirArchivos(){
-	in = fopen("/home/lucas/Documentos/ML-Project/template.html","r");
-	out = fopen("/home/lucas/resu.txt","w");
+	in = fopen(archin,"r");
+	out = fopen(archout,"w");
 }
 
 void cerrarArchivos(){
